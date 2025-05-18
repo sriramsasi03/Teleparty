@@ -1,0 +1,77 @@
+.App {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+.chat-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+}
+
+.message-container {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.message-sent {
+  justify-content: flex-end;
+}
+
+.message-received {
+  justify-content: flex-start;
+}
+
+.system-message {
+  text-align: center;
+  margin: 10px 0;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+.typing-indicator {
+  text-align: left;
+  font-style: italic;
+  color: #6c757d;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+  display: inline-block;
+  position: relative;
+}
+
+.typing-indicator small {
+  display: flex;
+  align-items: center;
+}
+
+.typing-indicator small::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  background-color: #6c757d;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
